@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https//unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <script src="js/script.js" defer> </script>
     <title>MyBudgetApp</title>
 </head>
@@ -32,7 +32,52 @@
                 </form>
             </div>
         </div>
-    </div>
 
+        <!-- Cards Starts -->
+        <ul class="cards">
+            <li>
+                <i class="bx bx-money"></i>
+                <span class="info">
+                    <h3><span>$</span><span class="budget_card">2000</span></h3>
+                    <p>Budget</p>
+                </span>
+            </li>
+            <li>
+                <i class="bx bx-credit-card"></i>
+                <span class="info">
+                    <h3><span>$</span><span class="expenses_card">2000</span></h3>
+                    <p>Expenses</p>
+                </span>
+            </li>
+            <li>
+                <i class="bx bx-dollar"></i>
+                <span class="info">
+                    <h3><span>$ </span><span class="balance_card">2000</span></h3>
+                    <p>Balance</p>
+                </span>
+            </li>
+        </ul>
+        <!-- Cards Ends -->
+
+        <!-- Table content starts -->
+         <div class="table_content">
+            <h3>Budget Details</h3>
+            <div class="table_data">
+                <ul class="tbl_tr_content">
+                    <li>1</li>
+                    <li>Gaming Mouse</li>
+                    <li>
+                        <span>$</span>
+                        600
+                    </li>
+                    <li>
+                        <button type="button" class="btn_edit">Edit</button>
+                        <button class="btn_delete" type="button">Delete</button>
+                    </li>
+                </ul>  
+            </div>
+         </div>
+
+    </div>
 </body>
 </html>
