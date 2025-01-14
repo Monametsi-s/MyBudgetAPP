@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light: #f6f6f9;
+    --primary: #1976d2;
+    --light-primary: #cfe8ff;
+    --grey: #fff;
+    --dark: #363949;
+    --danger: #d32f2f;
+    --dark-grey:#aaaaaa;
+    --light-danger: #ee8db7;
+    --warning: #ffa000;
+    --light-warning: #ffecb3;
+    --success: #388e3c;
+    --light-success: #c8e6c9;
+
+    /* --background-dark-color: #10121A;
+    --background-dark-grey: #191D2B;
+    --border-color: #2e344e;
+    --background-light-color: #F1F1F1;
+    --white-color: #FFF; 
+    --font-light-color: #a4acc4;
+    --font-dark-color: #313131;
+    --font-dark-color-2: #151515;
+    --sidebar-dark-color: #191D2B;
+    --scrollbar-bg-color: #383838;
+    --scrollbar-thump-color: #6b6b6b;
+    --scrollbar-track-color: #383838; */ 
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--light);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--grey);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px #000;
+    overflow-x: hidden;
+}
+
+.container h2 {
+    padding: 2rem 0;
+    font-size: 4rem;
+    text-align: center;
+    color: var(--dark);
+    
+}
+
+.error_message {
+    background-color: var(--danger);
+    color: var(--light);
+    padding: 1rem 0;
+    text-align: center;
+    width: 650px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: none;
+}
+
+.budget_content {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.ur_budget form input,
+.ur_expenses form input {
+    padding: 0.4rem 1rem;
+    width: 300px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    border-radius: 3px;
+}
+
+.ur_budget form input:focus,
+.ur_expenses form input:focus {
+    outline: none;
+}
+
+.ur_budget form,
+.ur_expenses form {
+    position: relative;
+}
+
+.budget_content .btn {
+    position: absolute;
+    right: 0;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    padding: 0.6rem 1rem;
+    color: var(--light); border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    background-color: var(--dark);
+}
+
+
+.budget_content .btn:active {
+    transform: scale(0.98);
+}
+

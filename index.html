@@ -4,4 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https//unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script src="js/script.js" defer> </script>
+    <title>MyBudgetApp</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Budget App</h2>
+        <div class="error_message">
+            <p>Please Enter Budget Amount | more than 0</p>
+        </div>
+        <div class="budget_content">
+            <div class="ur_budget">
+                <form >
+                    <label for="budget"> My Budget: </label>
+                    <input type="number" placeholder="Enter amount" class="budget_input">
+                    <button class="btn" id="btn_budget">Calculate</button>
+                </form>
+            </div>
+            <div class="ur_expenses">
+                <form >
+                    <label for="expenses"> My Expenses: </label>
+                    <input type="number" placeholder="Expenses details" class="expensess_input">
+                    <input type="number" placeholder="Expenses amount" class="expensess_amount">
+                    <button class="btn" id="btn_expenses">Add Expenses</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
