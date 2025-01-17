@@ -73,6 +73,11 @@ body{
     display: none;
 }
 
+.error_message.error {
+    display: block;
+    transition: all 0.8s ease-in;
+}
+
 .budget_content {
     padding: 2rem;
     display: flex;
