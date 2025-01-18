@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <script src="js/script.js" defer> </script>
+    <script src="js\script.js" defer> </script>
     <title>MyBudgetApp</title>
 </head>
 <body>
@@ -26,7 +26,7 @@
             <div class="ur_expenses">
                 <form >
                     <label for="expenses"> My Expenses: </label>
-                    <input type="number" placeholder="Expenses details" class="expensess_input">
+                    <input type="text" placeholder="Expenses details" class="expensess_input">
                     <input type="number" placeholder="Expenses amount" class="expensess_amount">
                     <button class="btn" id="btn_expenses">Add Expenses</button>
                 </form>
@@ -62,19 +62,16 @@
         <!-- Table content starts -->
          <div class="table_content">
             <h3>Budget Details</h3>
-            <div class="table_data">
+            <div class="tbl_data">
                 <ul class="tbl_tr_content">
                     <li>1</li>
-                    <li>Gaming Mouse</li>
-                    <li>
-                        <span>$</span>
-                        600
-                    </li>
+                    <li>Game</li>
+                    <li><span>$</span>20</li>
                     <li>
                         <button type="button" class="btn_edit">Edit</button>
                         <button class="btn_delete" type="button">Delete</button>
                     </li>
-                </ul>  
+                </ul> 
             </div>
          </div>
 
