@@ -4,7 +4,7 @@ const errorMesgEl = document.querySelector('.error_message');
 const budgetInputEl = document.querySelector('.budget_input');
 const expensesInputEl = document.querySelector('.expensess_input');
 const expensesAmountEl = document.querySelector('.expensess_amount');
-const tableRecordEl = document.querySelector('.tbl_data');
+const tableRecordEl = document.querySelector('.table_data');
 const cardsContainer = document.querySelector('.cards');
 
 // cards content
@@ -13,7 +13,7 @@ const expensesCardEl = document.querySelector('.expenses_card');
 const balanceCardEl = document.querySelector('.balance_card');
 
 let itemList = [];
-let itemID = 0;
+let itemID = 1;
 
 // ===========Button EVENTS============
 function btnEvents() {
@@ -47,14 +47,13 @@ function expensesFun() {
         const expense = {
             id: itemID, // Use current itemID
             description: expenseDescValue, // Use captured description
-            amount: parseFloat(expenseAmountValue) // Use captured amount
+            amount: parseFloat(expenseAmountValue).toFixed(2) // Use captured amount
         };
 
-        expensesInputEl.value = ""; // Reset input field
-        expensesAmountEl.value = ""; // Reset input field
         itemList.push(expense); // Add to itemList
         itemID++; // Increment itemID
-
+        expensesInputEl.value = ""; // Reset input field
+        expensesAmountEl.value = ""; // Reset input field
 
         insertExpense(expense); // Add to table
         showBalance(); // Update balance
@@ -65,7 +64,7 @@ function expensesFun() {
 //===============Add Expenses to Table================
 function insertExpense(expenseParam) {
     const html = `<ul class="tbl_tr_content">
-                    <li>${expenseParam.id}</li>
+                    <li data-id= ${expenseParam.id}>${expenseParam.id}</li>
                     <li>${expenseParam.description}</li>
                     <li><span>$</span>${expenseParam.amount}</li>
                     <li>
@@ -73,8 +72,29 @@ function insertExpense(expenseParam) {
                         <button class="btn_delete" type="button">Delete</button>
                     </li>
                 </ul>  `;
-                tableRecordEl.insertAdjacentHTML('beforeend', html);
+tableRecordEl.insertAdjacentHTML('beforeend', html);
+//==================Edit and Delete Button================
+
+const btnEdit = document.querySelectorAll('.btn_edit');
+const btnDelete = document.querySelectorAll('.btn_delete');
+const content_id = document.querySelectorAll('.tbl_tr_content');
+
+// ==============Button Edit Function================
+
+btnEdit.forEach((btnEdit) => {
+    btnEdit.addEventListener('click', (e) => {
+        let id;})
+
+        content_id.forEach((ids) => {
+            console.log(ids);
+        });
+    });
 }
+            //btnEdit.forEach((btn, index) => {
+            //     btn.addEventListener('click', () => {
+            //         editExpense(index);
+            //     });
+            // });
 
 
 // ===============Budget Function===============
@@ -86,7 +106,7 @@ function budgetFun() {
     } else if (budgetValue < 0) {
         return errorMessage("Please Enter Budget more than 0");
     } else {
-        budgetCardEl.textContent = budgetValue;
+        budgetCardEl.textContent = parseFloat(budgetValue).toFixed(2);
         budgetInputEl.value = "";
         showBalance();
     }
@@ -113,7 +133,44 @@ function totalExpenses() {
     let total = 0;
 
     if (itemList.length > 0) {
-        total = itemList.reduce((acc, curr) => acc + curr.amount, 0);
+        total = itemList.reduce((acc, curr) => { acc += curr.amount;
+            return parseFloat(acc).toFixed(2);
+         }, 0);
     }
+    expensesCardEl.textContent = total;
+    console.log(total);
     return total;
 }
+
+
+
+// Convert itemList to CSV format
+function convertToCSV(itemList) {
+    const headers = ['ID', 'Description', 'Amount'];
+    const rows = itemList.map(item => [item.id, item.description, item.amount]);
+
+    let csvContent = 'data:text/csv;charset=utf-8,';
+    csvContent += headers.join(',') + '\n';
+    rows.forEach(row => {
+        csvContent += row.join(',') + '\n';
+    });
+
+    return csvContent;
+}
+
+// Create a downloadable link for the CSV file
+function downloadCSV(itemList) {
+    const csvContent = convertToCSV(itemList);
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement('a');
+    link.setAttribute('href', encodedUri);
+    link.setAttribute('download', 'expenses.csv');
+    document.body.appendChild(link); // Required for Firefox
+    link.click();
+    document.body.removeChild(link);
+}
+
+// Add event listener to the download button
+document.getElementById('downloadBtn').addEventListener('click', () => {
+    downloadCSV(itemList);
+});
