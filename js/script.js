@@ -72,60 +72,55 @@ function insertExpense(expenseParam) {
                         <button class="btn_delete" type="button">Delete</button>
                     </li>
                 </ul>  `;
-tableRecordEl.insertAdjacentHTML('beforeend', html);
-//==================Edit and Delete Button================
+    tableRecordEl.insertAdjacentHTML('beforeend', html);
+    //==================Edit and Delete Button================
 
-const btnEdit = document.querySelectorAll('.btn_edit');
-const btnDelete = document.querySelectorAll('.btn_delete');
-const content_id = document.querySelectorAll('.tbl_tr_content');
+    const btnEdit = document.querySelectorAll('.btn_edit');
+    const btnDelete = document.querySelectorAll('.btn_delete');
+    const content_id = document.querySelectorAll('.tbl_tr_content');
 
-// ==============Button Edit Function================
+    // ==============Button Edit Function================
 
-btnEdit.forEach((btnEdit) => {
-    btnEdit.addEventListener('click', (e) => {
-        let id;})
+    btnEdit.forEach((btnEdit) => {
+        btnEdit.addEventListener('click', (e) => {
+            let id;
 
-        content_id.forEach((ids) => {
-            console.log(ids);
+            content_id.forEach((ids) => {
+                console.log(ids);
+                console.log(ids.childe.dataset.id);
+            });
         });
     });
 }
-            //btnEdit.forEach((btn, index) => {
-            //     btn.addEventListener('click', () => {
-            //         editExpense(index);
-            //     });
-            // });
+    // ===============Budget Function===============
+    function budgetFun() {
+        const budgetValue = budgetInputEl.value;
 
-
-// ===============Budget Function===============
-function budgetFun() {
-    const budgetValue = budgetInputEl.value;
-
-    if (budgetValue === '') {
-        return errorMessage("Please Enter Budget");
-    } else if (budgetValue < 0) {
-        return errorMessage("Please Enter Budget more than 0");
-    } else {
-        budgetCardEl.textContent = parseFloat(budgetValue).toFixed(2);
-        budgetInputEl.value = "";
-        showBalance();
+        if (budgetValue === '') {
+            return errorMessage("Please Enter Budget");
+        } else if (budgetValue < 0) {
+            return errorMessage("Please Enter Budget more than 0");
+        } else {
+            budgetCardEl.textContent = parseFloat(budgetValue).toFixed(2);
+            budgetInputEl.value = "";
+            showBalance();
+        }
     }
-}
 
-// ========Error Message function==========
-function errorMessage(message) {
-    errorMesgEl.innerHTML = `<p>${message}</p>`;
-    errorMesgEl.classList.add('error');
-    setTimeout(() => {
-        errorMesgEl.classList.remove('error');
-    }, 2500);
-}
+    // ========Error Message function==========
+    function errorMessage(message) {
+        errorMesgEl.innerHTML = `<p>${message}</p>`;
+        errorMesgEl.classList.add('error');
+        setTimeout(() => {
+            errorMesgEl.classList.remove('error');
+        }, 2500);
+    }
 
-// Function to show balance
-function showBalance() {
-    const expenses = totalExpenses();
-    const total = parseFloat(budgetCardEl.textContent) - expenses;
-    balanceCardEl.textContent = total.toFixed(2);
+    // Function to show balance
+    function showBalance() {
+        const expenses = totalExpenses();
+        const total = parseFloat(budgetCardEl.textContent) - expenses;
+        balanceCardEl.textContent = total.toFixed(2);
 }
 
 // Function to calculate total expenses
