@@ -12,7 +12,7 @@ This is a basic budget application to help you manage your income and expenses, 
 
 ## Installation
 
-1.  Clone the repository: `git clone https://github.com/Monametsi-s/MyBudgetAPP
+1.  Clone the repository: `git clone https://github.com/Monametsi-s/MyBudgetAPP`
 
 ## Usage
 
