@@ -1,4 +1,4 @@
-# Budget App README
+# Budget App
 
 ## Description
 
@@ -12,12 +12,11 @@ This is a basic budget application to help you manage your income and expenses, 
 
 ## Installation
 
-1.  Clone the repository: `git clone <repository_url>`
-2.  Install the dependencies: `npm install` (or `yarn install`, etc.)
-3.  Run the application: `npm start` (or `yarn start`, etc.)
+1.  Clone the repository: `git clone https://github.com/Monametsi-s/MyBudgetAPP
 
 ## Usage
 
 1.  Enter your income: Use the income input field to record your earnings.
 2.  Enter your expenses: Use the expense input field to record your expenditures.
 3.  View your balance: The application will automatically calculate and display your current balance.
+
