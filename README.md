@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a basic budget application to help you manage your income and expenses, and track your overall financial health. The app helps you view your expenses, remaining balance, and income. The app is built using HTML, CSS, and JavaScript.
+This is a basic budget application to help you manage your income and expenses, and track your overall financial health. The app helps you view your expenses, remaining balance, and income. It is built using HTML, CSS, and JavaScript.
 
 ## Features
 
