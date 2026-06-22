@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="666" viewBox="0 0 940 666" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="940" height="666" fill="#ffffff"/>
+<text x="470.0" y="54" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Budget App</text>
+<text x="470.0" y="74" text-anchor="middle" font-size="12" fill="#64748b">System Architecture</text>
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#94a3b8"/></marker></defs>
+<rect x="24" y="88" width="892" height="116" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="40" y="112" font-size="13" font-weight="700" fill="#2563eb">Client (User Browser)</text>
+<rect x="360.0" y="128" width="220.0" height="60" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="470.0" y="162.0" text-anchor="middle" font-size="12" fill="#1e293b">HTML form inputs</text>
+<line x1="470.0" y1="204" x2="470.0" y2="234" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="24" y="234" width="892" height="116" rx="12" fill="#ecfeff" stroke="#0891b2" stroke-width="1.5"/>
+<text x="40" y="258" font-size="13" font-weight="700" fill="#0891b2">Presentation</text>
+<rect x="360.0" y="274" width="220.0" height="60" rx="8" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+<text x="470.0" y="308.0" text-anchor="middle" font-size="12" fill="#1e293b">HTML + CSS UI</text>
+<line x1="470.0" y1="350" x2="470.0" y2="380" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="24" y="380" width="892" height="116" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="40" y="404" font-size="13" font-weight="700" fill="#7c3aed">Logic</text>
+<rect x="360.0" y="420" width="220.0" height="60" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="470.0" y="446.0" text-anchor="middle" font-size="12" fill="#1e293b">Vanilla JS</text>
+<text x="470.0" y="461.0" text-anchor="middle" font-size="12" fill="#1e293b">(income/expense/balance)</text>
+<line x1="470.0" y1="496" x2="470.0" y2="526" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="24" y="526" width="892" height="116" rx="12" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+<text x="40" y="550" font-size="13" font-weight="700" fill="#059669">Output</text>
+<rect x="360.0" y="566" width="220.0" height="60" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+<text x="470.0" y="600.0" text-anchor="middle" font-size="12" fill="#1e293b">DOM rendering</text>
+</svg>
